@@ -2,23 +2,12 @@
 
 This repository is used solely for learning NodeJS.
 
-## Lesson 3 :gear:
+## Lesson 4 :gear:
 
-The V8 Engine
+### Global Object
 
-### JavaScript Engines
-
-- Computers do not understand JavaScript
-- We need a JavaScript engine to take the JavaScript and convert it to machine code
-
-### Machine Code
-
-JavaScript --> C++ --> Assembly Language --> Machine Code
-
-- NodeJS is written in C++
-- Heart of NodeJS is the V8 engine
-- THe V8 engine converts JS into machine code
-
-### NodeJS with V8
-
-JavaScript --> C++ (NodeJS (V8)) --> Machine Code
+- `setTimeout([function],[time-in-ms])` performs the function after the specified time has passed
+- `setInterval([function],[time-in-ms])` performs the specified function once every the amount of time specified
+- `clearInterval()` clears the interval specified in `setInterval()` and stop the interval
+- `__dirname` shows the directory of the file
+- `__filename` shows the directory along with the filename of the file
