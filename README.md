@@ -2,12 +2,20 @@
 
 This repository is used solely for learning NodeJS.
 
-## Lesson 4 :gear:
+## Lesson 5 :gear:
 
-### Global Object
+### Function Expression
 
-- `setTimeout([function],[time-in-ms])` performs the function after the specified time has passed
-- `setInterval([function],[time-in-ms])` performs the specified function once every the amount of time specified
-- `clearInterval()` clears the interval specified in `setInterval()` and stop the interval
-- `__dirname` shows the directory of the file
-- `__filename` shows the directory along with the filename of the file
+Function expression is basically storing an anonymous function in a variable so that it can be passed into another function.
+
+```javascript
+function callFunction(fun) {
+  fun();
+}
+
+var sayBye = function() {
+  console.log("Bye");
+};
+
+callFunction(sayBye);
+```
