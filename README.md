@@ -2,7 +2,7 @@
 
 This repository is used solely for learning NodeJS.
 
-## Lesson 2 :gear:
+## Lesson 3 :gear:
 
 The V8 Engine
 
