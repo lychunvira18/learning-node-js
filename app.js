@@ -1,20 +1,11 @@
-var fs = require("fs");
+var http = require("http");
 
-// fs.mkdirSync("stuff");  // Makes directory called "stuff"
-
-// fs.rmdirSync("stuff");  // Removes directory called "stuff"
-
-// fs.mkdir("Stuff", () => {
-//   fs.readFile("readthis.txt", "utf8", (err, data) => {
-//     fs.writeFile("./Stuff/writeMe.txt", data, err => {
-//       if (err) throw err;
-//     });
-//     if (err) throw err;
-//   });
-// });
-
-fs.unlink("./Stuff/writeMe.txt", function() {
-  fs.rmdir("stuff", err => {
-    if (err) throw err;
-  });
+var server = http.createServer((req, res) => {
+  console.log("Request was made: " + req.url);
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Hey Ninjas");
 });
+
+server.listen(3000, "127.0.0.1");
+
+console.log("Now listening to port 3000...");
