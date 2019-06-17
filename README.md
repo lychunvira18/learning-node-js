@@ -2,13 +2,17 @@
 
 This repository is used solely for learning NodeJS.
 
-## Lesson 12 :gear:
+## Lesson 13 :gear:
 
-### Creating a Server
+### Streams and Buffers
 
-#### `http` module
+#### Buffers
 
-- `http.createServer((request,response) => {})` is used to create a server
-- `server.listen([port],[ip])` is used to listen requests and response on the specified port and ip
-- `res.writeHead([status-code], {"Content-Type":[type-of-content]})` is used to specify the header including the status code and content type of the response
-- `res.end([content])` is used to give the content at the end of a response
+- Temporary storage spot for a chunk of data that is being transferred from one place to another
+- Transfers small chuncks of data at a time
+
+#### Stream
+
+- A stream of data being sent to the client
+- Can create streams in Node.js to transfer data
+- Increase performance
