@@ -2,17 +2,24 @@
 
 This repository is used solely for learning NodeJS.
 
-## Lesson 13 :gear:
+## Lesson 14 :gear:
 
-### Streams and Buffers
+### Readable Streams
 
-#### Buffers
+#### Streams
 
-- Temporary storage spot for a chunk of data that is being transferred from one place to another
-- Transfers small chuncks of data at a time
+- **Writable streams** - allow node.js to write data to a stream
+- **Readable streams** - allow to read data from a stream
+- **Duplex** - can read and write to a stream
 
-#### Stream
+#### Readable Streams
 
-- A stream of data being sent to the client
-- Can create streams in Node.js to transfer data
-- Increase performance
+- `var readStream = fs.createReadStream([directory],[charset])` creates a new readable stream from the directory and storing in a particular charset (encoding)
+- `readStream.on([event-to-be-listened],[callback-function])` is used to listen to an event, triggering a function
+
+```javascript
+myReadStream.on("data", chunk => {
+  console.log("New chunk received");
+  console.log(chunk);
+});
+```
