@@ -2,24 +2,14 @@
 
 This repository is used solely for learning NodeJS.
 
-## Lesson 14 :gear:
+## Lesson 15 :gear:
 
-### Readable Streams
+### Writable Streams
 
-#### Streams
-
-- **Writable streams** - allow node.js to write data to a stream
-- **Readable streams** - allow to read data from a stream
-- **Duplex** - can read and write to a stream
-
-#### Readable Streams
-
-- `var readStream = fs.createReadStream([directory],[charset])` creates a new readable stream from the directory and storing in a particular charset (encoding)
-- `readStream.on([event-to-be-listened],[callback-function])` is used to listen to an event, triggering a function
+- `var myWriteStream = fs.createWriteStream([directory])` is used to create a new writable stream at the directory.
 
 ```javascript
 myReadStream.on("data", chunk => {
-  console.log("New chunk received");
-  console.log(chunk);
+  myWriteStream.write(chunk);
 });
 ```
